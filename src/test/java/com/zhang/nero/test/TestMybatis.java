@@ -1,5 +1,7 @@
 package com.zhang.nero.test;  
   
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.apache.log4j.Logger;
@@ -23,7 +25,9 @@ public class TestMybatis {
   
     @Test  
     public void test1() {
-        User user = userService.getUserById(1);
-        logger.info(JSON.toJSONString(user));  
+        List<User> userList = userService.getUserById(2);
+        logger.info(JSON.toJSONString(userList));
+        userList = userService.getUserByName("LQQ");
+        logger.info(JSON.toJSONString(userList));
     }  
 }  

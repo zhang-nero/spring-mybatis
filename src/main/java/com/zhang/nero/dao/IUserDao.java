@@ -1,5 +1,7 @@
 package com.zhang.nero.dao;
 
+import java.util.List;
+
 import com.zhang.nero.modle.User;
 
 public interface IUserDao {
@@ -9,7 +11,9 @@ public interface IUserDao {
 
     int insertSelective(User record);
 
-    User selectByPrimaryKey(Integer id);
+    List<User> selectByPrimaryKey(Integer id);
+
+    List<User> selectByname(String name);
 
     int updateByPrimaryKeySelective(User record);
 
